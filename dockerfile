@@ -12,4 +12,8 @@ RUN mv /code/node_modules /node_modules
 # Copy application files
 COPY . /code
 
+ENV PORT=9100
+
+EXPOSE 9100 5858
+
 CMD ["npm", "start"]

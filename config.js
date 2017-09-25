@@ -1,7 +1,9 @@
 'use strict'
 
 const joi = require('joi')
+const dotenv = require('dotenv')
 
+dotenv.load()
 const envVarsSchema = joi.object({
   NODE_ENV: joi.string()
     .allow(['development', 'production', 'test'])
