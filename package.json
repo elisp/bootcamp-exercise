@@ -8,6 +8,8 @@
     "joi": "^11.0.1",
     "koa": "^2.3.0",
     "koa-router": "^7.2.1",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
     "winston": "^2.3.1"
   },
   "engines": {
