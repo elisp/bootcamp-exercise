@@ -16,7 +16,9 @@
     "node": "8.5.0"
   },
   "scripts": {
-    "test-web": "NODE_ENV=test PROCESS_TYPE=web mocha 'web/test.setup.js' 'web/**/*.spec.js'",
+    "test-web": "set NODE_ENV=test&&set PROCESS_TYPE=web&&mocha web/test.setup.js web/**/*.spec.js",
+    "test-models": "set NODE_ENV=test&&mocha models/test.setup.js models/**/*.spec.js",
+    "test-only": "npm run test-web&&npm run test-models",
     "start": "node .",
     "dev": "nodemon .",
     "lint": "eslint .",
@@ -28,7 +30,7 @@
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^3.5.3",
-    "nock": "^9.0.14",
+    "nock": "^9.0.22",
     "sinon": "^3.3.0",
     "sinon-chai": "^2.13.0",
     "super-request": "^1.2.0"
