@@ -6,8 +6,10 @@
   "dependencies": {
     "dotenv": "^4.0.0",
     "joi": "^11.0.1",
+    "knex": "^0.13.0",
     "koa": "^2.3.0",
     "koa-router": "^7.2.1",
+    "pg": "^7.3.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
     "winston": "^2.3.1"
