@@ -2,6 +2,8 @@
 #   Dockerize PostgreSQL
 #   https://docs.docker.com/engine/examples/postgresql_service/
 #
+#   Look also at: https://github.com/brogersyh/Dockerfiles-for-windows
+#
 
 #   Build an image from the Dockerfile assign it a name.
 #   $ docker build -t postgresql .
