@@ -13,10 +13,10 @@ module.exports = {
       database: 'bootcamp'
     },
     migrations: {
-      directory: path.join(__dirname, '/db/migrations')
+      directory: path.join(__dirname, '/models/db/migrations')
     },
     seeds: {
-      directory: path.join(__dirname, '/db/seeds/development')
+      directory: path.join(__dirname, '/models/db/seeds')
     }
   }
 

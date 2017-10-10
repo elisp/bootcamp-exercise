@@ -1,9 +1,6 @@
 'use strict'
 
-const config = require('../knexfile.js')
-
-const env = 'development'
-const knex = require('knex')(config[env])
+const knex = require('../models/db')
 
 knex.migrate.latest()
   .then(() => {

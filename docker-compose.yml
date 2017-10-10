@@ -2,11 +2,30 @@ version: '3'
 services:
   web:
     build: .
-    environment:
-    - PORT=9100
+    env_file: .env
     command: nodemon --inspect=5858 index.js
     volumes:
-    - .:/code
+      -  .:/code
     ports:
       - "9100:9100"
       - "5858:5858"
+    depends_on:
+      - postgres
+      # - redis
+    links:
+      # - "redis:redis"
+      - "postgres:postgres"
+
+  postgres:
+    image: postgres:10.0
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: buser
+      POSTGRES_PASSWORD: buserpass
+      POSTGRES_DB: bootcamp
+
+  # redis:
+  #   image: redis:4.0.2
+  #   ports:
+  #     - "6379:6379"

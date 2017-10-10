@@ -16,4 +16,4 @@ ENV PORT=9100
 
 EXPOSE 9100 5858
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
