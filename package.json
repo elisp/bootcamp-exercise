@@ -5,15 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "joi": "^11.0.1",
+    "joi": "^11.4.0",
     "knex": "^0.13.0",
-    "koa": "^2.3.0",
-    "koa-router": "^7.2.1",
+    "koa": "^2.4.1",
+    "koa-router": "^7.3.0",
     "lodash": "^4.17.4",
-    "pg": "^7.3.0",
+    "pg": "^7.4.0",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5",
-    "winston": "^2.3.1"
+    "winston": "^2.4.0"
   },
   "engines": {
     "node": "8.5.0"
