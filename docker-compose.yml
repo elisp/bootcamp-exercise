@@ -1,6 +1,7 @@
 version: '3'
 services:
   web:
+    container_name: web
     build: .
     env_file: .env
     command: nodemon --inspect=5858 index.js
@@ -11,12 +12,13 @@ services:
       - "5858:5858"
     depends_on:
       - postgres
-      # - redis
+      - redis
     links:
-      # - "redis:redis"
       - "postgres:postgres"
+      - "redis:redis"
 
   postgres:
+    container_name: db
     image: postgres:10.0
     ports:
       - "5432:5432"
@@ -27,7 +29,8 @@ services:
       POSTGRES_PASSWORD: buserpass
       POSTGRES_DB: bootcamp
 
-  # redis:
-  #   image: redis:4.0.2
-  #   ports:
-  #     - "6379:6379"
+  redis:
+      container_name: redis
+      image: redis:alpine
+      ports:
+        - "6379:6379"
